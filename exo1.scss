@@ -1,0 +1,75 @@
+$bleu: rgba(17, 17, 139, 1);
+$couleurheader: white;
+
+@mixin mixin1 (){
+    font-size: 16px;
+}
+
+@mixin mixin2 (){
+    font-size: 35px;
+    color: $bleu;
+}
+
+
+
+*{
+    margin: 0px;
+    font-family: 'Lato', serif;
+}
+
+header {
+    background-color: $bleu;
+    color: $couleurheader;
+}
+
+h1 {
+    padding: 25px 0px 15px 60px;
+    font-size: 40px;
+}
+
+.section1 {
+    padding-left: 25px;
+    .titre1 {
+        color: $bleu;
+        font-size: 60px;
+        padding-bottom: 14px;
+        padding-top: 40px;
+    }
+    .p1 {
+        padding-bottom: 32px;
+    }
+    button {
+        @include mixin1;
+        border: none;
+        color: $couleurheader;
+        background-color: $bleu;
+        padding: 16px 24px;
+    }
+}
+
+.section2 {
+    background-color: rgba(238, 238, 252, 1);
+    margin: 70px 25px 0px;
+    .titre2 {
+        @include mixin2;
+        padding: 38px 0px 0px 38px;
+    }
+    .p2 {
+        @include mixin1;
+        padding: 14px 52px 38px 38px;
+    }
+}
+
+.section3 {
+    background-color: rgba(238, 238, 252, 1);
+    margin: 70px 25px 0px;
+    .titre3 {
+        @include mixin2;
+        padding: 38px 0px 0px 38px;
+    }
+    .p3 {
+        @include mixin1;
+        padding: 14px 52px 38px 38px;
+        margin-bottom: 40px;
+    }
+}
